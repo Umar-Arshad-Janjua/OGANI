@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import breadcrumb from './images/breadcrumb.png'
 import banner from './images/banner.png'
 import Footer from './Footer'
 import { getData } from './CardData';
@@ -12,7 +12,7 @@ class HomePage extends React.Component{
  
     state = {
         data: getData(),
-        name: this.props.title
+        name: this.props.banner
       };
 
 render(){
@@ -20,6 +20,8 @@ render(){
     return(
     
         <>
+        <img src={breadcrumb} className='img-fluid' alt="" />
+                <h1 class="fw-bold text-white" style={{position: "relative", top: "-70px", fontFamily: "cairo"}}>OGANI HOME</h1>
 
         <div className ="container d-flex mb-0">
 
