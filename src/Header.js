@@ -12,7 +12,7 @@ import Shop from './Shop';
 import Pages from './Pages';
 import Blogs from './Blog';
 import Contact from './Contact';
-import LoginPage from './LoginPage';
+import LoginPage from './LoginPage'
 import CustomerInfo from './CustomerInfo';
 import Cart from './Cart';
 import './styles.css';
