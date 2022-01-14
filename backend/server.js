@@ -25,11 +25,11 @@ connection.once('open', () => {
 
 
 const CartRouter = require('./routes/cartroute');
-
+const customerRouter = require('./routes/customer');
 app.use('/cart',CartRouter)
 app.use('/',CartRouter)
-const studentRouter = require('./routes/student');
-app.use('/student',studentRouter)
+
+app.use('/customer',customerRouter)
 app.listen(port, () => {
     console.log(`Server is running on port : ${port}`);
 })

@@ -106,14 +106,14 @@ class CustomerInfo extends Component {
     }    
     
     handleSubmit = (e) => {    
-        e.preventDefault();    
+        e.preventDefault();  
     
         if (this.handleFormValidation()) {    
             alert('You have successfully enetered details.')    
             this.setState(this.state)    
         }  
         console.log(this.state)
-        axios.post('http://localhost:5000/student/add', this.state)  
+        axios.post('http://localhost:5000/customer/add', this.state)  
         .then(res=> console.log(res.data));
     }    
     

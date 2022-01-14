@@ -1,10 +1,10 @@
 const router = require('Express').Router();
 const req = require('express/lib/request');
-let Student = require('../models/student.model')
+let Customer = require('../models/customer.model')
 
 router.route('/').get((req, res)=>{
-    Student.find()
-    .then(students => res.json(students))
+    Customer.find()
+    .then(customers => res.json(customers))
     .catch(err=> res.status(400).json('Error: '+ err));
 });
 
@@ -14,15 +14,15 @@ router.route('/add').post((req, res) =>{
     const gender = req.body.gender;
     const city = req.body.city;
 
-    const newStudent = new Student({
+    const newCustomer = new Customer({
         custAddress,
         emailId,
         gender,
         city
     });
 
-    newStudent.save()
-    .then(() => res.json('Student Added!'))
+    newCustomer.save()
+    .then(() => res.json('Customer Added!'))
     .catch(err => res.status(400).json('Error: '+ err));
 
 })
